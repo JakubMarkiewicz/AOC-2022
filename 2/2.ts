@@ -1,7 +1,6 @@
 import { readFileSync } from "fs"
 
-const input = readFileSync("./input.txt").toString().split("\n").slice(0, -1)
-
+const input = readFileSync("./input.txt", "utf8").match(/.+/g)
 
 enum T {
 	Rock = 1,
@@ -45,4 +44,4 @@ for (const round of input) {
 
 }
 
-console.log(result)
+console.log(`Answer is: ${result}`)
