@@ -2,6 +2,10 @@ import { readFileSync } from "fs"
 
 const input = readFileSync("./input.txt", "utf8").match(/.+/g)
 
+if (!input) {
+	throw new Error("Invalid input file provided")
+}
+
 enum T {
 	Rock = 1,
 	Paper = 2,
